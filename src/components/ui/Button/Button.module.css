@@ -2,12 +2,23 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  font: inherit;
-  font-weight: 600;
-  cursor: pointer;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 28px;
+  border: 0;
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.light {
+  background: #fff;
+  color: #000;
+}
+
+.light:hover {
+  background: var(--color-text-soft);
 }
 
 .primary {
@@ -15,8 +26,11 @@
   color: #fff;
 }
 
-.secondary {
-  background: transparent;
-  border-color: var(--color-border);
-  color: var(--color-text);
+.primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.block {
+  display: flex;
+  width: 100%;
 }

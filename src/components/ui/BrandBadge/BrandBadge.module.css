@@ -1,0 +1,18 @@
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+  .badge {
+    top: 10px;
+    left: 10px;
+    width: 26px;
+    height: 26px;
+  }
+}
