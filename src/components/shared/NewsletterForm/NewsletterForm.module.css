@@ -1,0 +1,135 @@
+.newsletter {
+  padding: 28px 26px;
+  border: 1px solid var(--color-border);
+  background: var(--gradient-newsletter);
+}
+
+.kicker {
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.title {
+  margin-top: 10px;
+  font-size: var(--newsletter-title-size, 30px);
+  font-weight: var(--weight-bold);
+  line-height: 1.06;
+}
+
+.titleEnd {
+  display: block;
+}
+
+.subtitle {
+  margin-top: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field span {
+  font-size: 10.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.field input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.38);
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.field input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.field input:focus {
+  border-color: #fff;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.consent input {
+  flex: none;
+  width: 15px;
+  height: 15px;
+  margin-top: 1px;
+  accent-color: #fff;
+}
+
+.submit {
+  height: 48px;
+  margin-top: 4px;
+  border: 0;
+  background: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: var(--weight-bold);
+  transition: background-color 0.2s;
+}
+
+.submit:hover {
+  background: var(--color-text-soft);
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.success {
+  margin-top: 22px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .newsletter {
+    padding: 24px 20px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 1.08;
+  }
+
+  .titleEnd {
+    display: inline;
+  }
+
+  .form {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,15 @@
+.panel {
+  position: relative;
+  max-width: calc(var(--container-width) - 40px);
+  margin: 0 auto;
+  padding: 30px 30px 50px;
+  background: var(--color-surface);
+}
+
+@media (max-width: 900px) {
+  .panel {
+    max-width: none;
+    padding: 0 var(--gutter);
+    background: transparent;
+  }
+}

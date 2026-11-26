@@ -1,6 +1,130 @@
 .footer {
-  padding: var(--space-6) 0;
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
   border-top: 1px solid var(--color-border);
+}
+
+.inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 50px var(--gutter) 0;
+}
+
+.sitemap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.heading {
+  margin-bottom: 12px;
+  font-size: 13px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.text {
+  margin-bottom: 14px;
+  font-size: 14px;
+  line-height: 1.45;
   color: var(--color-text-muted);
-  font-size: 0.875rem;
+}
+
+.go {
+  font-size: 13px;
+  font-weight: var(--weight-bold);
+  color: var(--color-primary-light);
+}
+
+.go:hover {
+  color: #fff;
+}
+
+.legal {
+  display: flex;
+  gap: 24px;
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid var(--color-border);
+  font-size: 13px;
+  color: var(--color-text-subtle);
+}
+
+.legal a:hover {
+  color: #fff;
+}
+
+.about {
+  max-width: 640px;
+  margin-top: 18px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--color-text-subtle);
+}
+
+.copy {
+  padding: 40px var(--gutter) 34px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 900px) {
+  .footer {
+    margin-top: 32px;
+  }
+
+  .inner {
+    padding-top: 28px;
+  }
+
+  .sitemap {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 18px;
+  }
+
+  .heading {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  .text {
+    margin: 8px 0 8px;
+    font-size: 12.5px;
+  }
+
+  .go {
+    font-size: 12.5px;
+  }
+
+  .social {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-subtle);
+  }
+
+  .legal {
+    gap: 18px;
+    margin-top: 18px;
+    padding-top: 0;
+    border-top: 0;
+    font-size: 12px;
+  }
+
+  .about {
+    margin-top: 16px;
+    font-size: 12px;
+  }
+
+  .copy {
+    padding: 18px var(--gutter) 20px;
+    font-size: 10px;
+  }
 }

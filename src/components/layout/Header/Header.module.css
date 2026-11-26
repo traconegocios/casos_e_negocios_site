@@ -1,29 +1,130 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(8, 8, 10, 0.92);
   border-bottom: 1px solid var(--color-border);
-  background: var(--color-bg);
+  backdrop-filter: blur(8px);
 }
 
-.inner {
+.bar {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 72px;
+  gap: 10px;
+  max-width: var(--container-width);
+  height: var(--header-height);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.25rem;
+.logo img {
+  width: auto;
+  height: 36px;
 }
 
 .nav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: flex;
-  gap: var(--space-4);
+  gap: 40px;
+  transform: translate(-50%, -50%);
 }
 
 .link {
-  color: var(--color-text-muted);
+  font-size: 12.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s;
 }
 
-.link:global(.active) {
-  color: var(--color-text);
+.link:hover,
+.active {
+  color: var(--color-primary);
+}
+
+.search {
+  width: 300px;
+  margin-left: auto;
+}
+
+.menuButton {
+  display: none;
+}
+
+.drawer {
+  display: none;
+}
+
+/* Telas médias: o menu sai do centro para não encostar na busca */
+@media (max-width: 1100px) and (min-width: 901px) {
+  .nav {
+    position: static;
+    transform: none;
+    margin-left: 40px;
+    gap: 28px;
+  }
+
+  .search {
+    width: 240px;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo img {
+    height: 32px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .search {
+    flex: 1;
+    width: auto;
+    margin-left: 6px;
+  }
+
+  .menuButton {
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 0;
+    background: var(--color-field);
+    color: #fff;
+  }
+
+  .drawer {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 var(--gutter);
+    background: rgba(8, 8, 10, 0.98);
+    transition: max-height 0.25s ease, padding 0.25s ease;
+  }
+
+  .drawerOpen {
+    max-height: 320px;
+    padding: 8px var(--gutter) 16px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .drawerLink {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 14px;
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .drawerLink:last-child {
+    border-bottom: 0;
+  }
 }
