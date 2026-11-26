@@ -1,0 +1,16 @@
+/* Grift — fonte da marca Casos e Negócios (subconjunto latino) */
+@font-face {
+  font-family: 'Grift';
+  src: url('../assets/fonts/grift-regular.woff') format('woff');
+  font-weight: 100 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Grift';
+  src: url('../assets/fonts/grift-extrabold.woff') format('woff');
+  font-weight: 600 900;
+  font-style: normal;
+  font-display: swap;
+}
