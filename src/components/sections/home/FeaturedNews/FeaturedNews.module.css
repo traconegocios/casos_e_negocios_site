@@ -1,0 +1,115 @@
+.section {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card {
+  display: block;
+}
+
+.media {
+  position: relative;
+  height: 158px;
+  overflow: hidden;
+}
+
+.media img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover .media img {
+  transform: scale(1.04);
+}
+
+.body {
+  padding-top: 20px;
+}
+
+.title {
+  margin-top: 16px;
+  font-size: 17px;
+  font-weight: var(--weight-bold);
+  line-height: 1.32;
+  transition: color 0.2s;
+}
+
+.card:hover .title {
+  color: var(--color-primary-light);
+}
+
+.dots {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .section {
+    margin-top: 28px;
+    padding: 0;
+  }
+
+  .section > :first-child {
+    padding: 0 var(--gutter);
+  }
+
+  .track {
+    display: flex;
+    gap: 12px;
+    padding: 0 var(--gutter);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 var(--gutter);
+    scrollbar-width: none;
+  }
+
+  .track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: none;
+    width: 250px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    scroll-snap-align: start;
+  }
+
+  .media {
+    height: 140px;
+  }
+
+  .body {
+    padding: 12px 14px 16px;
+  }
+
+  .title {
+    margin-top: 6px;
+    font-size: 15px;
+    line-height: 1.28;
+  }
+
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border: 0;
+    background: var(--color-border-strong);
+    transition: width 0.2s, background-color 0.2s;
+  }
+
+  .dotActive {
+    width: 18px;
+    background: var(--color-primary);
+  }
+}
